@@ -17,7 +17,7 @@ Validation accuracy vs training iterations(Best model validation accuracy is 82%
 ## Getting started
 Use git to clone the repository with the following command:   
 `git clone https://github.com/taldatech/ee046211-deep-learning.git`   
-If an ece046211 virtual environment is already installed on your machine, you can skip to the transformers package in the table below and go from there.    
+If an ece046211 virtual environment is already installed on your machine, activate it(`conda activate deep_learn`), skip to the transformers package installation in the table below and continue from there.    
 Else:
 1. Get Anaconda with Python 3, follow the instructions according to your OS (Windows/Mac/Linux) at: https://www.anaconda.com/download
 2. Create a new environment for the course and install packages from scratch:
