@@ -17,11 +17,11 @@ Validation accuracy vs training iterations(Best model validation accuracy is 82%
 ## Getting started
 Use git to clone the repository with the following command:   
 `git clone https://github.com/taldatech/ee046211-deep-learning.git`   
-If an ece046211 virtual environment is already installed on your machine, you can skip to the next section.    
+If an ece046211 virtual environment is already installed on your machine, you can skip to the transformers package in the table below and go from there.    
 Else:
 1. Get Anaconda with Python 3, follow the instructions according to your OS (Windows/Mac/Linux) at: https://www.anaconda.com/download
 2. Create a new environment for the course and install packages from scratch:
-In Windows open `Anaconda Prompt` from the start menu, in Mac/Linux open the terminal and run `conda create --name deep_learn`. Full guide at https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands
+In Windows open `Anaconda Prompt` from the start menu, in Mac/Linux open the terminal and run `conda create --name deep_learn python=3.9`. Full guide at https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands
 4. To activate the environment, open the terminal (or `Anaconda Prompt` in Windows) and run `conda activate deep_learn`
 5. Install the required libraries according to the table below (to search for a specific library and the corresponding command you can also look at https://anaconda.org/)
 
@@ -43,6 +43,14 @@ In Windows open `Anaconda Prompt` from the start menu, in Mac/Linux open the ter
 |`pytorch` (gpu)| `conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia` (<a href="https://pytorch.org/get-started/locally/">get command from PyTorch.org</a>)|
 |`torchtext`| `conda install -c pytorch torchtext`|
 |`torchdata`| `conda install -c pytorch torchdata` + `pip install portalocker`|
+|`transformers`|`conda install -c conda-forge transformers`|
+|`accelerate`|`conda install -c conda-forge accelerate`|
+|`datasets`|`conda install -c conda-forge datasets`|
+|`evaluate`|`conda install -c conda-forge evaluate`|
+|`pydub`|`conda install -c conda-forge pydub`|
+|`audiomentations`|`pip install audiomentations`|
+|`librosa`|`conda install -c conda-forge librosa`|
+|`tensorboardX`|`conda install -c conda-forge tensorboardX`|
 ## Train and Test Notebooks
 There are two jupyter notebooks in the repository:  
 * `train_test_gtzan.ipynb`- Trains the AST model on GTZAN dataset using the suggested fine tuning method, save the most accurate model on the validation set and show the test set results of it.
