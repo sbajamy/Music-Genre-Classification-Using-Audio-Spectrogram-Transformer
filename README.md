@@ -10,9 +10,9 @@ AST: Audio Spectrogram Transformer Yuan Gong, Yu-An Chung, James Glass. The main
 Classic transfer learning scheme. Freezing all the pretrained AST model layers but the last layer. This layer is replaced with a new fully connected layer which is used to adapt AST to the new task during training.
 ## Results
 Used 80% of the GTZAN samples as a training set and the rest were equally divided to a validation and test set(10% each).  
-Using the section above's method during training and validation, the test set classification accuracy achieved was 84% and its confusion matrix:  
+Using the section above's method during training and validation, the test set classification accuracy achieved was 85% and its confusion matrix:  
 ![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Test_confusion_matrix.jpg)   
-Validation accuracy vs training iterations(Best model validation accuracy is 80%):  
+Validation accuracy vs training iterations(Best model validation accuracy is 82%):  
 ![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Validation_vs_iterations.jpg)  
 ## Getting started
 Use git to clone the repository with the following command:   
@@ -46,7 +46,7 @@ In Windows open `Anaconda Prompt` from the start menu, in Mac/Linux open the ter
 ## Train and Test Notebooks
 There are two jupyter notebooks in the repository:  
 * `train_test_gtzan.ipynb`- Trains the AST model on GTZAN dataset using the suggested fine tuning method, save the most accurate model on the validation set and show the test set results of it.
-* `test_best_model.ipynb`- Test the current saved best music genre classification model capabilities on any youtube music video or on your own music files.  
+* `test_best_model.ipynb`- Test the current saved best music genre classification model capabilities on your own music files.  
 
 To open a notebook, open Ananconda Navigator or run `jupyter notebook` in the terminal (or `Anaconda Prompt` in Windows) while the `deep_learn` environment is activated.   
 ## References
