@@ -51,6 +51,7 @@ In Windows open `Anaconda Prompt` from the start menu, in Mac/Linux open the ter
 |`audiomentations`|`pip install audiomentations`|
 |`librosa`|`conda install -c conda-forge librosa`|
 |`tensorboardX`|`conda install -c conda-forge tensorboardX`|
+|`tqdm`|`conda install -c conda-forge tqdm`|
 ## Train and Test Notebooks
 There are two jupyter notebooks in the repository:  
 * `train_test_gtzan.ipynb`- Trains the AST model on GTZAN dataset using the suggested fine tuning method, save the most accurate model on the validation set and show the test set results of it.
