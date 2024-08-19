@@ -17,7 +17,7 @@ Used 80% of the GTZAN samples as a training set and the rest were equally divide
 Using the section above's method during training and validation, the test set classification accuracy achieved was 83-87% and its confusion matrix:  
 ![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Test_confusion_matrix.jpg)  
 Cross entropy loss vs training iterations:  
-https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/TrainLoss_vs_iterations.jpg
+![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/TrainLoss_vs_iterations.jpg)  
 Validation accuracy vs training iterations(Best model validation accuracy is 87-89%):  
 ![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Validation_vs_iterations.jpg)  
 ## Getting started
