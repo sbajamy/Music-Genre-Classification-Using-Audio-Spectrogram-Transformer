@@ -7,12 +7,18 @@ AST: Audio Spectrogram Transformer Yuan Gong, Yu-An Chung, James Glass. The main
 ## Dataset
 "GTZAN is a dataset for musical genre classification of audio signals. The dataset consists of 1,000 audio tracks, each of 30 seconds long. It contains 10 genres, each represented by 100 tracks. The tracks are all 22,050Hz Mono 16-bit audio files in WAV format. The genres are: blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, and rock."[https://huggingface.co/datasets/marsyas/gtzan]
 ## Fine tuning method
-Classic transfer learning scheme. Freezing all the pretrained AST model layers but the last layer. This layer is replaced with a new fully connected layer which is used to adapt AST to the new task during training.
+These are used to adapt AST to the new task during training:
+* Freezing pretrained AST model layers. 
+* Replacing the last layer is with a 2 layer MLP wi dropout and Adding a possibility of a DoRA wrapper in the encoder feed forward's last layer. 
+* Adding sound augmentation to diversify the small dataset(Slow/fast, lowpass/highpass, echo and a mix of these).
+* Optuna hyperparameter search.  
 ## Results
 Used 80% of the GTZAN samples as a training set and the rest were equally divided to a validation and test set(10% each).  
-Using the section above's method during training and validation, the test set classification accuracy achieved was 85% and its confusion matrix:  
-![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Test_confusion_matrix.jpg)   
-Validation accuracy vs training iterations(Best model validation accuracy is 82%):  
+Using the section above's method during training and validation, the test set classification accuracy achieved was 83-87% and its confusion matrix:  
+![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Test_confusion_matrix.jpg)  
+Cross entropy loss vs training iterations:  
+https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/TrainLoss_vs_iterations.jpg
+Validation accuracy vs training iterations(Best model validation accuracy is 87-89%):  
 ![alt text](https://github.com/sbajamy/Music-Genre-Classification-Using-Audio-Spectrogram-Transformer/blob/main/images/Validation_vs_iterations.jpg)  
 ## Getting started
 Use git to clone the repository with the following command:   
